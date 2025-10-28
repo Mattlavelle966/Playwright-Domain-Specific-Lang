@@ -1,0 +1,59 @@
+{"ModuleTestData" : {
+  "TCModule_1": {
+    "ExecStep#1": "click=#btnOrganization;click=#btnOrganization;",
+    "ExecStep#2": "click=#btnOrganization;",
+    "ExecStep#3": "End"
+  },
+  "TCModule_2": {
+    "ExecStep#1": "click=#btnCreateSubmission;",
+    "Category Type": "Product Submission",
+    "ExecStep#2": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,SUBMISSION-CATEGORY~option+REQUEST-CATEGORY-CLINICIAN-LED-SUBMISSION;",
+    "ExecStep#3": "name=globalPassTest;",
+    "ExecStep#4": "navigate=https://qa.direct.health.gov.on.ca/maintenance/list/product;",
+    "ExecStep#5": "IsVisible=#btnAdvancedSearch;",
+    "towlette": "fibro",
+    "ExecStep#6": "type=#searchInput~pass+towlette*fibro;",
+    "fibro": "myalgia",
+    "ExecStep#7": "input=pass+fibro*myalgia;",
+    "sort": " Advanced Search ",
+    "ExecStep#8": "assert=#btnAdvancedSearch~pass+sort* Advanced Search ;",
+    "ExecStep#9": "end"
+  },
+  "TCModule_3": {
+    "ExecStep#1": "click=#btnCreateSubmission;",
+    "Category Type": "Product Submission",
+    "ExecStep#2": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,SUBMISSION-CATEGORY~option+REQUEST-CATEGORY-CLINICIAN-LED-SUBMISSION;",
+    "ExecStep#3": "name=globalLiteralTest;",
+    "ExecStep#4": "navigate=https://qa.direct.health.gov.on.ca/maintenance/list/product;",
+    "ExecStep#5": "IsVisible=#btnAdvancedSearch;",
+    "towlette": "fibro",
+    "ExecStep#6": "type=#searchInput~fibro;",
+    "fibro": "myalgia",
+    "ExecStep#7": "input=myalgia;",
+    "sort": " Advanced Search ",
+    "ExecStep#8": "assert=#btnAdvancedSearch~ Advanced Search ;",
+    "ExecStep#9": "end"
+  },
+  "TCModule_4": {
+    "ExecStep#1": "click=#menuMaintenance;click=#btnOrganization;",
+    "ExecStep#2": "type=#searchInput~hello;",
+    "ExecStep#3": "click=#searchInput;wait=5000;input= world;",
+    "ExecStep#4": "navigate=https://qa.direct.health.gov.on.ca/maintenance/list/product;"
+  },
+  "TCModule_5": {
+    "ExecStep#1": "click=#btnEdit0;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-1;",
+    "ExecStep#3": "click=#notes;",
+    "ExecStep#4": "name=firstTest;",
+    "ExecStep#5": "end"
+  },
+  "TCModule_6": {
+    "ExecStep#1": "name=dataInputTest;",
+    "ExecStep#2": "type=#searchInput~pass+Names*Michael;",
+    "Names": "Michael",
+    "ExecStep#3": "input=pass+Names*Michael;",
+    "Title": " Advanced Search ",
+    "ExecStep#4": "assert=#searchButton~pass+Title* Advanced Search ;",
+    "ExecStep#5": "end"
+  }
+}}
