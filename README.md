@@ -1,6 +1,6 @@
 # Universal Excel Based Domain Specific Language for QA Automation, built on Playwright
 
-> **Note:** This project is still in early development and is not ready for personal or proffesional use.  
+> **Note:** This project is still in early development and is not ready for personal or proffesional use, due to this project being developed under MPBSDP the original commit logs are hidden.  
 
 ## Overview
 
