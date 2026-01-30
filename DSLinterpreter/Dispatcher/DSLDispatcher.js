@@ -88,53 +88,6 @@ module.exports = {
         console.log(`Complete Operation ${Operand} with Id:" ${Id} which contained:${actual}`); 
         return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, Id, ``,actual, pass, errors[0]];
     },
-    "grab-pfn": async (page, Operand,Id,interpretedPack,index,subIndex) => {
-        console.log(`Attempting Operation "${Operand}" with Id:"${Id}"`);
-        const errors = [];
-        let pass = false;
-        let actual = 'N/A';
-       
-         try{
-            const fileNumberText = await page.textContent('app-submit-success-dialog p span',{timeout:30000});
-            actual = fileNumberText;
-            pass = true;
-        }catch(e){
-            console.log(e);
-            pass = false;
-            errors.push(e.message);
-        }
-        console.log(pass)
-        console.log(`Complete Operation ${Operand} with Id:" ${Id} which contained:${actual}`); 
-        return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, Id, ``,actual, pass, errors[0]];
-    },
-    "validate-sharepoint": async (page, Operand,Id,interpretedPack,index,subIndex) => {
-        console.log(`Attempting Operation "${Operand}" with Id:"${Id}"`);
-        const errors = [];
-        let pass = false;
-        let actual = 'N/A';
-       
-         try{
-            if(Id == ''){throw new Error("No PFN provided for SharePoint validation");}
-            await page.goto('https://ontariogov.sharepoint.com/sites/SADIEFlexForms/DIRECTDoc/default.aspx');
-            await page.getByRole('link', { name: '2026 Submissions, Folder' }).click();
-            await page.getByRole('textbox', { name: 'Type something and hit enter' }).fill(Id);
-            await page.getByRole('textbox', { name: 'Type something and hit enter' }).press('Enter');
-            const links = await page.getByRole('link', { name: /^test/i }).allTextContents();
-
-
-            actual = links;
-
-
-            pass = true;
-        }catch(e){
-            console.log(e);
-            pass = false;
-            errors.push(e.message);
-        }
-        console.log(pass)
-        console.log(`Complete Operation ${Operand} with Id:" ${Id} which contained:${actual}`); 
-        return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, Id, ``,actual, pass, errors[0]];
-    },
     "click-btn": async (page, Operand,Id,interpretedPack,index,subIndex) => {
         console.log(`Attempting Operation "${Operand}" with Id:"${Id}"`);
         const errors = [];
@@ -500,36 +453,6 @@ module.exports = {
 
         return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, "n/a","", actual, pass, errors[0]]
     },
-    "file-assert": async (page, Operand,Id,interpretedPack,index,subIndex) => {
-        console.log(`Attempting Operation "${Operand}" with input:"${Id}"`);
-        const errors = [];
-        let pass = false;
-        let actual = '';
-        try{
-            await expect(page.locator('#accordion-content-1')).toContainText('testDocs1.docx');
-            await expect(page.locator('#accordion-content-1')).toContainText('testDocs2.docx');
-            await expect(page.locator('#accordion-content-1')).toContainText('testDocs3.docx');
-            await expect(page.locator('#accordion-content-1')).toContainText('testfileexcel.xlsx');
-            await expect(page.locator('#accordion-content-1')).toContainText('testDocs4.docx');
-            await expect(page.locator('#accordion-content-1')).toContainText('testfileexcel2.xlsx');
-            await expect(page.locator('#accordion-content-1')).toContainText('testpdf2.pdf');
-            await expect(page.locator('#accordion-content-1')).toContainText('testpdf3.pdf');
-            await expect(page.locator('#accordion-content-1')).toContainText('testpdf4.pdf');
-            await expect(page.locator('#accordion-content-1')).toContainText('testpdf5.pdf');
-            await expect(page.locator('#accordion-content-1')).toContainText('testpdf5 (1).pdf');
-            pass = true;
-            actual = 'All files found in upload accordion';
-        }catch(e){
-            console.log(e)
-            pass = false
-            errors.push(e.message);
-            actual = 'One or more files not found in upload accordion';
-        }
-        console.log(pass)
-        console.log(`Complete ${Operand} Operation with Id:" ${Id} which contained:${actual}`); 
-
-        return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, "n/a","", actual, pass, errors[0]]
-    },
     //needs to pull data from data sheet
     "assert": async (page, Operand,Id,interpretedPack,index,subIndex) => {
         const errors = [];
@@ -652,26 +575,6 @@ module.exports = {
 
         return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, Id, "", actual, pass, errors[0]];
     }, 
-    "waitforevent": async (page, Operand,Id,interpretedPack,index,subIndex) => {
-        console.log(`Attempting Operation "${Operand}" with Id:"${Id}"`);
-        const errors = [];
-        let pass = false;
-        let actual = '';
-        try{
-
-            const page1Promise = await page.waitForEvent(Id);
-            pass = true;
-
-        }catch(e){
-            console.log(e)
-            pass = false
-            errors.push(e.message);
-        }
-        console.log(pass)
-        console.log(`Complete ${Operand} Operation with Id:" ${Id} which contained:${actual}`); 
-
-        return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, Id, "", actual, pass, errors[0]];
-    },
     "scroll-up-down": async (page, Operand,Id,interpretedPack,index,subIndex) => {
         console.log(`Attempting Operation "${Operand}" with Id:"${Id}"`);
         const errors = [];
@@ -709,24 +612,6 @@ module.exports = {
         console.log(`Complete ${Operand} Operation with Id:" ${Id} which contained:${actual}`); 
 
         return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, Id, "N/A", actual, pass, errors[0]]
-    },
-    "file-tc18-assert": async (page, Operand,Id,interpretedPack,index,subIndex) => {
-        console.log(`Attempting Operation "${Operand}" with input:"${Id}"`);
-        const errors = [];
-        let pass = false;
-        let actual = '';
-        try{
-            actual = await assertionsTC18(page);
-            pass = true;
-        }catch(e){
-            console.log(e)
-            pass = false
-            errors.push(e.message);
-        }
-        console.log(pass)
-        console.log(`Complete ${Operand} Operation with Id:" ${Id} which contained:${actual}`); 
-
-        return [ caseNameFinder(interpretedPack,index),index,subIndex,Operand, "n/a","", actual, pass, errors[0]]
     },
 
 };
