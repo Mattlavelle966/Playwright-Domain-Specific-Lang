@@ -1,0 +1,197 @@
+{"ModuleTestData" : {
+  "TCModule_1": {
+    "TestCase": "Login",
+    "Run": "Y",
+    "description": "this is a login function",
+    "ExecStep#1": "name=login;",
+    "ExecStep#2": "login=https://qa.direct.health.gov.on.ca/login;click=#btnLogin;",
+    "ExecStep#3": "end"
+  },
+  "TCModule_2": {
+    "ExecStep#1": "name=HealthCanadaDocs;",
+    "ExecStep#7": "click=#mat-tab-group-0-label-3;click=#addHEALTHCANADADOCUMENTATIONNAV,HEALTHCANADADOCUMENTATIONGROUP,NOCAPPROVALGROUP1;",
+    "ExecStep#8": "wait=3000;",
+    "ExecStep#9": "textbox-fill=NOC Approved Date  (required)~2026-01-05;",
+    "ExecStep#10": "textbox-fill=Submission Control Number (~12345678;wait=5000;",
+    "ExecStep#11": "card-upload=1~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testDocs1.docx;",
+    "ExecStep#12": "click=addHEALTHCANADADOCUMENTATIONNAV,HEALTHCANADADOCUMENTATIONGROUP,PRODUCTMONOGRAPHGINFORROUP;",
+    "ExecStep#13": "textbox-fill=Date of Product Monograph~2026-01-05;",
+    "ExecStep#14": "textbox-fill=Submission Control Number (~12345678;wait=2000;",
+    "ExecStep#15": "card-upload=2~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\testDocs2.docx;",
+    "ExecStep#16": "wait=2000;",
+    "ExecStep#17": "end"
+  },
+  "TCModule_3": {
+    "ExecStep#1": "name=ProductDetails;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-1;",
+    "ExecStep#3": "click=#accordion-button-id-0-dynamic;",
+    "ExecStep#4": "type=#brandName0~Melange;",
+    "ExecStep#5": "type=#name0~Spice;",
+    "ExecStep#6": "select=#productIdentifierType0~option+urn:idms:medicinalProductType:DIN;",
+    "ExecStep#7": "type=#identifier0~12345678;",
+    "ExecStep#8": "select=#dosageForm0~option+Aerosol;",
+    "ExecStep#9": "type=#strength0~500mg;",
+    "ExecStep#10": "select=#route0,0~option+Block-Infiltration;",
+    "ExecStep#11": "radio-btn=Biologic~No;",
+    "ExecStep#12": "radio-btn=Oncology~No;",
+    "ExecStep#13": "select=#packageType0,0~option+3: Object;",
+    "ExecStep#14": "type=#packageSize0,0~5;",
+    "ExecStep#15": "select=#priceType0,0,0~option+2: Object;type=#price0,0,0~14.0;",
+    "ExecStep#16": "type=#unit0,0,0~10;",
+    "ExecStep#17": "end"
+  },
+  "TCModule_4": {
+    "ExecStep#1": "name=SubmissionDetails;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-2;",
+    "ExecStep#3": "click=#SUBMISSIONDETAILSNAV,SUBMISSIONDETAILSGROUP,REQUESTEDFUNDING-checkbox-option-0;",
+    "ExecStep#4": "click=#SUBMISSIONDETAILSNAV,SUBMISSIONDETAILSGROUP,REQUESTEDFUNDING-checkbox-option-1;",
+    "ExecStep#5": "click=#SUBMISSIONDETAILSNAV,SUBMISSIONDETAILSGROUP,REQUESTEDFUNDING-checkbox-option-2;",
+    "ExecStep#6": "click=#SUBMISSIONDETAILSNAV,SUBMISSIONDETAILSGROUP,REQUESTEDFUNDING-checkbox-option-3;",
+    "ExecStep#7": "type=#SUBMISSIONDETAILSNAV,SUBMISSIONDETAILSGROUP,INDICATIONS~test message;",
+    "ExecStep#8": "end"
+  },
+  "TCModule_5": {
+    "ExecStep#1": "name=LineExtensionDetails;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-4;",
+    "ExecStep#3": "id-upload=#LINEEXTDETAILSNAV,LINEEXTDETAILSGROUP,JUSTIFICATIONDOCUMENT-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testDocs3.docx;wait=3000;",
+    "ExecStep#4": "id-upload=#LINEEXTDETAILSNAV,LINEEXTDETAILSGROUP,SCIENTIFICEVIDENCE-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testDocs4.docx;",
+    "ExecStep#5": "radio-btn-filter=Does the Line Extension Product contain the same drug product solution~No;",
+    "ExecStep#6": "id-upload=#LINEEXTDETAILSNAV,LINEEXTDETAILSGROUP,FORMULATIONPROPORIONALITY-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testfileexcel.xlsx;",
+    "ExecStep#7": "end"
+  },
+  "TCModule_6": {
+    "ExecStep#1": "name=FinancialImpactAnalysis;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-5;",
+    "ExecStep#3": "id-upload=#FINANCIALIMPACTANALYSIS,FINANCIALIMPACTANALYSISGROUP,BUDGETIMPACTREPORT-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testfileexcel2.xlsx;wait=3000;",
+    "ExecStep#4": "id-upload=#FINANCIALIMPACTANALYSIS,FINANCIALIMPACTANALYSISGROUP,BUDGETIMPACTMODEL-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf1.pdf;wait=3000;",
+    "ExecStep#5": "id-upload=#FINANCIALIMPACTANALYSIS,FINANCIALIMPACTANALYSISGROUP,BUDGETIMPACTREPORTSUMMARY-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf2.pdf;",
+    "ExecStep#7": "end"
+  },
+  "TCModule_7": {
+    "ExecStep#1": "name=SupplementalInformation;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-6;",
+    "ExecStep#3": "id-upload=#SUPPLEMENTALNAV,SUPPLEMENTALGROUP,SUPPLEMENTALSUPPORTING-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf3.pdf;",
+    "ExecStep#4": "type=#SUPPLEMENTALNAV,SUPPLEMENTALGROUP,SUPPLEMENTALADDITIONALINFO~random text;",
+    "ExecStep#7": "end"
+  },
+  "TCModule_8": {
+    "ExecStep#1": "name=Attestations;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-7;",
+    "ExecStep#3": "radio-btn-filter=Do you, as the vendor, possess legal authority to bind the manufacturer, as evidenced by your documented business arrangement~No;wait=1000;",
+    "ExecStep#4": "id-upload=#ATTESTATIONSNAV,ATTESTATIONSGROUP,LETTEROFCONSENT-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf4.pdf;wait=3000;",
+    "ExecStep#5": "id-upload=#ATTESTATIONSNAV,ATTESTATIONSGROUP,ABILITYTOSUPPLYLETTER-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf5.pdf;wait=3000;",
+    "ExecStep#6": "id-upload=#ATTESTATIONSNAV,ATTESTATIONSGROUP,CERTIFICATIONOFNOREBATELETTER-singleDrop~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf5.pdf;",
+    "ExecStep#7": "end"
+  },
+  "TCModule_9": {
+    "ExecStep#1": "name=Review;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-8;",
+    "ExecStep#3": "click=#btnSubmitverifyAndSubmit;",
+    "ExecStep#4": "wait=5000;",
+    "ExecStep#5": "click-btn=Accept;",
+    "ExecStep#6": "wait=5000;",
+    "ExecStep#7": "grab-pfn=;",
+    "ExecStep#8": "end"
+  },
+  "TCModule_10": {
+    "ExecStep#1": "name=sharepointValidation;",
+    "ExecStep#2": "validate-sharepoint=pfn;",
+    "ExecStep#3": "end"
+  },
+  "TCModule_11": {
+    "ExecStep#1": "name=assertionsTC275;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-8;",
+    "ExecStep#4": "click=#accordion-button-id-1;",
+    "ExecStep#5": "wait=2000;screenshot=TC18A-;",
+    "ExecStep#6": "file-assert=;",
+    "ExecStep#7": "end"
+  },
+  "TCModule_12": {
+    "ExecStep#1": "name=assertionsTC18;",
+    "ExecStep#2": "click=#mat-tab-group-0-label-8;",
+    "ExecStep#3": "wait=3000;screenshot=TC18A-;",
+    "ExecStep#4": "click=#accordion-button-id-1;",
+    "ExecStep#5": "wait=2000;screenshot=TC18B-;",
+    "ExecStep#6": "file-tc18-assert=;",
+    "ExecStep#8": "end"
+  },
+  "TCModule_13": {
+    "ExecStep#1": "name=Download-pfn;",
+    "ExecStep#2": "download=#btnSubmitDownload;",
+    "ExecStep#3": "end"
+  },
+  "TCModule_14": {
+    "ExecStep#1": "name=allGroupsTC275;",
+    "ExecStep#2": "call=HealthCanadaDocs;",
+    "ExecStep#3": "call=ProductDetails;",
+    "ExecStep#4": "call=SubmissionDetails;",
+    "ExecStep#5": "call=LineExtensionDetails;",
+    "ExecStep#6": "call=FinancialImpactAnalysis;",
+    "ExecStep#7": "call=SupplementalInformation;",
+    "ExecStep#8": "call=Attestations;",
+    "ExecStep#9": "call=assertionsTC275;",
+    "ExecStep#10": "call=Review;",
+    "ExecStep#11": "screenshot=TC275B-;call=Download-pfn;",
+    "ExecStep#12": "end"
+  },
+  "TCModule_15": {
+    "ExecStep#1": "name=allGroupsTC18;",
+    "ExecStep#2": "call=HealthCanadaDocs;",
+    "ExecStep#3": "call=ProductDetails;",
+    "ExecStep#4": "call=SubmissionDetails;",
+    "ExecStep#5": "call=LineExtensionDetails;",
+    "ExecStep#6": "call=FinancialImpactAnalysis;",
+    "ExecStep#7": "call=SupplementalInformation;",
+    "ExecStep#8": "call=Attestations;",
+    "ExecStep#9": "call=assertionsTC18;",
+    "ExecStep#10": "end"
+  },
+  "TCModule_16": {
+    "TestCase": "Drug Submission",
+    "Run": "Y",
+    "ExecStep#1": "name=drugsubmissionTC275;call=login;",
+    "ExecStep#2": "click=#btnCreateSubmission;",
+    "ExecStep#3": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,SUBMISSION-CATEGORY~option+REQUEST-CATEGORY-DRUG-SUBMISSION;",
+    "ExecStep#4": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,PRODUCT-TYPE~option+PRODUCT-BIOSIMILAR;",
+    "ExecStep#5": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,SUBMISSION-TYPE~option+SUB-BIOSIMILAR-LINE;",
+    "ExecStep#6": "click=#nextButton;wait=5000;",
+    "manufacturer": 20250527.141655,
+    "ExecStep#7": "click=#manufacturerDetails,orgSearchButton;input=20250527.141655;",
+    "ExecStep#8": "wait=3000;press=ArrowDown;press=Enter;",
+    "ExecStep#9": "id-upload=#authorizationUpload~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf6.pdf;",
+    "ExecStep#10": "radio-btn-filter=Select where the Primary Contact is from~Vendor;",
+    "ExecStep#11": "select=#manufacturerDetails,contact-select~option+5: 7e9f6bec-b0e8-4bf7-9c4d-ac966e028525;",
+    "ExecStep#12": "call=allGroupsTC275;",
+    "ExecStep#13": "end"
+  },
+  "TCModule_17": {
+    "ExecStep#1": "name=drugsubmissionTC18;call=login;",
+    "ExecStep#2": "click=#btnCreateSubmission;",
+    "ExecStep#3": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,SUBMISSION-CATEGORY~option+REQUEST-CATEGORY-DRUG-SUBMISSION;",
+    "ExecStep#4": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,PRODUCT-TYPE~option+PRODUCT-BIOSIMILAR;",
+    "ExecStep#5": "select=#PRODUCT-SUBMISSION-TYPE-GROUP,FORM-GROUP,SUBMISSION-TYPE~option+SUB-BIOSIMILAR-LINE;",
+    "ExecStep#6": "click=#nextButton;wait=5000;",
+    "ExecStep#7": "click=#manufacturerDetails,orgSearchButton;input=20250527.141655;",
+    "ExecStep#8": "wait=3000;press=ArrowDown;press=Enter;",
+    "ExecStep#9": "id-upload=#authorizationUpload~C:\\Users\\LavellMa\\OneDrive - Government of Ontario\\Documents\\junkFiles\\\\testpdf6.pdf;",
+    "ExecStep#10": "radio-btn-filter=Select where the Primary Contact is from~Vendor;",
+    "ExecStep#11": "select=#manufacturerDetails,contact-select~option+5: 7e9f6bec-b0e8-4bf7-9c4d-ac966e028525;",
+    "ExecStep#12": "call=allGroupsTC18;",
+    "ExecStep#13": "end"
+  },
+  "TCModule_18": {
+    "TestCase": 11,
+    "Run": "Y",
+    "Submission Category": "Drug Submissions",
+    "Submission Type": "Biosimilar Product",
+    "Product Type": "Line Extension",
+    "ExecStep#1": "name=testCase275;",
+    "ExecStep#3": "call=drugsubmissionTC275;",
+    "ExecStep#4": "end"
+  },
+  "TCModule_19": {
+    "ExecStep#1": "name=testCase18;",
+    "ExecStep#3": "call=drugsubmissionTC18;",
+    "ExecStep#4": "end"
+  }
+}}

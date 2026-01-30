@@ -1,0 +1,8 @@
+{"ModuleTestData" : {
+  "TCModule_1": {
+    "URL#1": "https://qa.direct.health.gov.on.ca/login",
+    "URL#2": "https://qa.direct.health.gov.on.ca/submissions",
+    "External/Internal": "Internal",
+    "Auto login": "y"
+  }
+}}
