@@ -2,7 +2,6 @@
 
 > **Note:** This project is in early development and is not ready for personal or professional use. Because this project is being developed under MPBSDP, the original commit logs are hidden.
 
-## Overview
 
 This project is a **low-code, domain-specific language (DSL)** built entirely in Node.js using Playwright to enable **site-agnostic UI test automation**. It was originaly developed for one of the QA teams at the **Ministry of Public Business Service Delivery and Procurement (MPBSDP)** to empower testers to define and execute automated web tests without writing traditional code.
 
